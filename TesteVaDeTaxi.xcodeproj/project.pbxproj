@@ -485,6 +485,7 @@
 				DEVELOPMENT_TEAM = 2FXPMLN8LH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TesteVaDeTaxi/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Way Airlines";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -513,6 +514,7 @@
 				DEVELOPMENT_TEAM = 2FXPMLN8LH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TesteVaDeTaxi/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Way Airlines";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
