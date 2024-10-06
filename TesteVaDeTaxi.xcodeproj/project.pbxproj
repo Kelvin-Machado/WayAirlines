@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		B66251B12CB2265300156AE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251B02CB2265300156AE8 /* AppDelegate.swift */; };
 		B66251B32CB2265300156AE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251B22CB2265300156AE8 /* SceneDelegate.swift */; };
-		B66251B52CB2265300156AE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251B42CB2265300156AE8 /* ViewController.swift */; };
-		B66251B82CB2265300156AE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66251B62CB2265300156AE8 /* Main.storyboard */; };
 		B66251BA2CB2265800156AE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66251B92CB2265800156AE8 /* Assets.xcassets */; };
 		B66251BD2CB2265800156AE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66251BB2CB2265800156AE8 /* LaunchScreen.storyboard */; };
 		B66251C82CB2265A00156AE8 /* TesteVaDeTaxiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251C72CB2265A00156AE8 /* TesteVaDeTaxiTests.swift */; };
 		B66251D22CB2265A00156AE8 /* TesteVaDeTaxiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251D12CB2265A00156AE8 /* TesteVaDeTaxiUITests.swift */; };
 		B66251D42CB2265A00156AE8 /* TesteVaDeTaxiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251D32CB2265A00156AE8 /* TesteVaDeTaxiUITestsLaunchTests.swift */; };
+		B66251E62CB2286000156AE8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251E52CB2286000156AE8 /* HomeViewController.swift */; };
+		B66251EA2CB228A500156AE8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251E92CB228A500156AE8 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		B66251AD2CB2265300156AE8 /* TesteVaDeTaxi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesteVaDeTaxi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66251B02CB2265300156AE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B66251B22CB2265300156AE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B66251B42CB2265300156AE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B66251B72CB2265300156AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B66251B92CB2265800156AE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B66251BC2CB2265800156AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B66251BE2CB2265800156AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +47,8 @@
 		B66251CD2CB2265A00156AE8 /* TesteVaDeTaxiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TesteVaDeTaxiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66251D12CB2265A00156AE8 /* TesteVaDeTaxiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteVaDeTaxiUITests.swift; sourceTree = "<group>"; };
 		B66251D32CB2265A00156AE8 /* TesteVaDeTaxiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteVaDeTaxiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B66251E52CB2286000156AE8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B66251E92CB228A500156AE8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +99,9 @@
 		B66251AF2CB2265300156AE8 /* TesteVaDeTaxi */ = {
 			isa = PBXGroup;
 			children = (
-				B66251B02CB2265300156AE8 /* AppDelegate.swift */,
-				B66251B22CB2265300156AE8 /* SceneDelegate.swift */,
-				B66251B42CB2265300156AE8 /* ViewController.swift */,
-				B66251B62CB2265300156AE8 /* Main.storyboard */,
-				B66251B92CB2265800156AE8 /* Assets.xcassets */,
-				B66251BB2CB2265800156AE8 /* LaunchScreen.storyboard */,
-				B66251BE2CB2265800156AE8 /* Info.plist */,
+				B66251E22CB2282300156AE8 /* Model */,
+				B66251E12CB2280200156AE8 /* Controller */,
+				B66251E02CB227B800156AE8 /* SupportingFiles */,
 			);
 			path = TesteVaDeTaxi;
 			sourceTree = "<group>";
@@ -125,6 +121,58 @@
 				B66251D32CB2265A00156AE8 /* TesteVaDeTaxiUITestsLaunchTests.swift */,
 			);
 			path = TesteVaDeTaxiUITests;
+			sourceTree = "<group>";
+		};
+		B66251E02CB227B800156AE8 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B66251B02CB2265300156AE8 /* AppDelegate.swift */,
+				B66251B22CB2265300156AE8 /* SceneDelegate.swift */,
+				B66251B92CB2265800156AE8 /* Assets.xcassets */,
+				B66251BB2CB2265800156AE8 /* LaunchScreen.storyboard */,
+				B66251BE2CB2265800156AE8 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		B66251E12CB2280200156AE8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B66251E72CB2288100156AE8 /* Base */,
+				B66251E42CB2283C00156AE8 /* Home */,
+				B66251E32CB2282F00156AE8 /* FlightsHistory */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B66251E22CB2282300156AE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B66251E32CB2282F00156AE8 /* FlightsHistory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FlightsHistory;
+			sourceTree = "<group>";
+		};
+		B66251E42CB2283C00156AE8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B66251E52CB2286000156AE8 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B66251E72CB2288100156AE8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B66251E92CB228A500156AE8 /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +281,6 @@
 			files = (
 				B66251BD2CB2265800156AE8 /* LaunchScreen.storyboard in Resources */,
 				B66251BA2CB2265800156AE8 /* Assets.xcassets in Resources */,
-				B66251B82CB2265300156AE8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +305,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B66251B52CB2265300156AE8 /* ViewController.swift in Sources */,
 				B66251B12CB2265300156AE8 /* AppDelegate.swift in Sources */,
+				B66251EA2CB228A500156AE8 /* BaseViewController.swift in Sources */,
 				B66251B32CB2265300156AE8 /* SceneDelegate.swift in Sources */,
+				B66251E62CB2286000156AE8 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +345,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B66251B62CB2265300156AE8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B66251B72CB2265300156AE8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B66251BB2CB2265800156AE8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,12 +484,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2FXPMLN8LH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TesteVaDeTaxi/Info.plist;
+				INFOPLIST_FILE = TesteVaDeTaxi/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,12 +512,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2FXPMLN8LH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TesteVaDeTaxi/Info.plist;
+				INFOPLIST_FILE = TesteVaDeTaxi/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
