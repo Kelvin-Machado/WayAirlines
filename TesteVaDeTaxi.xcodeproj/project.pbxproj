@@ -16,6 +16,9 @@
 		B66251D42CB2265A00156AE8 /* TesteVaDeTaxiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251D32CB2265A00156AE8 /* TesteVaDeTaxiUITestsLaunchTests.swift */; };
 		B66251E62CB2286000156AE8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251E52CB2286000156AE8 /* HomeViewController.swift */; };
 		B66251EA2CB228A500156AE8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251E92CB228A500156AE8 /* BaseViewController.swift */; };
+		B66251ED2CB249D800156AE8 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251EC2CB249D800156AE8 /* BaseCollectionViewCell.swift */; };
+		B66251EF2CB24EBF00156AE8 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251EE2CB24EBF00156AE8 /* HomeCollectionViewCell.swift */; };
+		B66251F32CB2663F00156AE8 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251F22CB2663F00156AE8 /* UICollectionView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		B66251D32CB2265A00156AE8 /* TesteVaDeTaxiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteVaDeTaxiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B66251E52CB2286000156AE8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B66251E92CB228A500156AE8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B66251EC2CB249D800156AE8 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		B66251EE2CB24EBF00156AE8 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		B66251F22CB2663F00156AE8 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 				B66251E22CB2282300156AE8 /* Model */,
 				B66251E12CB2280200156AE8 /* Controller */,
 				B66251E02CB227B800156AE8 /* SupportingFiles */,
+				B66251F12CB265DA00156AE8 /* Extension */,
 			);
 			path = TesteVaDeTaxi;
 			sourceTree = "<group>";
@@ -162,6 +169,7 @@
 		B66251E42CB2283C00156AE8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B66251F02CB24F6E00156AE8 /* Cell */,
 				B66251E52CB2286000156AE8 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -171,8 +179,25 @@
 			isa = PBXGroup;
 			children = (
 				B66251E92CB228A500156AE8 /* BaseViewController.swift */,
+				B66251EC2CB249D800156AE8 /* BaseCollectionViewCell.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		B66251F02CB24F6E00156AE8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B66251EE2CB24EBF00156AE8 /* HomeCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B66251F12CB265DA00156AE8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B66251F22CB2663F00156AE8 /* UICollectionView+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,9 +331,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66251B12CB2265300156AE8 /* AppDelegate.swift in Sources */,
+				B66251F32CB2663F00156AE8 /* UICollectionView+Extension.swift in Sources */,
+				B66251ED2CB249D800156AE8 /* BaseCollectionViewCell.swift in Sources */,
 				B66251EA2CB228A500156AE8 /* BaseViewController.swift in Sources */,
 				B66251B32CB2265300156AE8 /* SceneDelegate.swift in Sources */,
 				B66251E62CB2286000156AE8 /* HomeViewController.swift in Sources */,
+				B66251EF2CB24EBF00156AE8 /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
