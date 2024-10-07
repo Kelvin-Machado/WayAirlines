@@ -5,5 +5,6 @@ final class FlightsHistoryViewCell: BaseCollectionViewCell {
     
     override func configure(image: UIImage?, text: String) {
         super.configure(image: image, text: text)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 25)
     }
 }

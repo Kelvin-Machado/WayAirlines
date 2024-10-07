@@ -55,9 +55,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //TODO: add coordinator
-        let detailVC = FlightsHistoryViewController()
-        detailVC.title = "Histórico de Voos"
-        navigationController?.pushViewController(detailVC, animated: true)
+        //TODO: add coordinator pattern
+        let service = FlightsHistoryService(client: APIClient())
+        let viewModel = FlightsHistoryViewModel(service: service)
+        let flightsHistoryVC = FlightsHistoryViewController(viewModel: viewModel)
+        flightsHistoryVC.title = "Histórico de Voos"
+        navigationController?.pushViewController(flightsHistoryVC, animated: true)
     }
 }

@@ -1,6 +1,8 @@
 import UIKit
 
-class BaseCollectionViewCell: UICollectionViewCell {
+class FlightsFilteredListViewCell: UICollectionViewCell {
+    
+    static let reuseIdentifier = String(describing: FlightsFilteredListViewCell.self)
     
     private let iconImageView: UIImageView = {
         let imageView = UIImageView()
@@ -8,7 +10,7 @@ class BaseCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    let titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 30)
         label.textColor = .black

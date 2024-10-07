@@ -33,4 +33,5 @@ enum CompletionStatus: String, Codable {
 enum Status: String, Codable {
     case cancelado = "CANCELADO"
     case concluido = "CONCLUIDO"
+    case emAndamento = "EM_ANDAMENTO"
 }
