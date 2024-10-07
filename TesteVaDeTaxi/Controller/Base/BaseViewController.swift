@@ -17,7 +17,7 @@ class BaseViewController: UIViewController {
         gradientLayer.frame = view.bounds
 
         gradientLayer.colors = [
-            UIColor.systemBlue.cgColor,
+            UIColor(hexString: "0E7AFE")?.cgColor ?? UIColor.blue,
             UIColor.white.cgColor
         ]
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 1)
@@ -30,7 +30,7 @@ class BaseViewController: UIViewController {
         guard let navigationBar = self.navigationController?.navigationBar else { return }
         
         let titleTextAttr: [NSAttributedString.Key: Any] = [
-            .foregroundColor: UIColor.white,
+            .foregroundColor: UIColor.black,
             .font: UIFont.systemFont(ofSize: 18, weight: .bold),
             .shadow: NSShadow()
         ]
@@ -43,9 +43,10 @@ class BaseViewController: UIViewController {
         navigationBar.scrollEdgeAppearance = navigationBarAppearance
         navigationBar.compactAppearance = navigationBarAppearance
         navigationBar.standardAppearance = navigationBarAppearance
+        navigationBar.topItem?.backButtonTitle = ""
         navigationBar.barTintColor = .black
+        navigationBar.tintColor = UIColor(hexString: "0E7AFE")
         navigationBar.isTranslucent = false
-        
         UINavigationBar.appearance().titleTextAttributes = titleTextAttr
         navigationBar.titleTextAttributes = titleTextAttr
     }

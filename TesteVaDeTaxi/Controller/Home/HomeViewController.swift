@@ -55,6 +55,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("tapped item")
+        //TODO: add coordinator
+        let detailVC = FlightsHistoryViewController()
+        detailVC.title = "Histórico de Voos"
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
