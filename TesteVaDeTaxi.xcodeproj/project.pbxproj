@@ -23,6 +23,8 @@
 		B66251F92CB353CD00156AE8 /* FlightsHistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251F82CB353CD00156AE8 /* FlightsHistoryViewCell.swift */; };
 		B66251FB2CB3602F00156AE8 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251FA2CB3602F00156AE8 /* UIColor+Extension.swift */; };
 		B66251FD2CB388CC00156AE8 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251FC2CB388CB00156AE8 /* Flight.swift */; };
+		B66252002CB3914800156AE8 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251FF2CB3914800156AE8 /* APIClient.swift */; };
+		B66252022CB3915D00156AE8 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66252012CB3915D00156AE8 /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		B66251F82CB353CD00156AE8 /* FlightsHistoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsHistoryViewCell.swift; sourceTree = "<group>"; };
 		B66251FA2CB3602F00156AE8 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B66251FC2CB388CB00156AE8 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		B66251FF2CB3914800156AE8 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B66252012CB3915D00156AE8 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 				B66251E22CB2282300156AE8 /* Model */,
 				B66251E12CB2280200156AE8 /* Controller */,
 				B66251E02CB227B800156AE8 /* SupportingFiles */,
+				B66251FE2CB390F700156AE8 /* Networking */,
 				B66251F12CB265DA00156AE8 /* Extension */,
 			);
 			path = TesteVaDeTaxi;
@@ -218,6 +223,15 @@
 				B66251F82CB353CD00156AE8 /* FlightsHistoryViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		B66251FE2CB390F700156AE8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B66251FF2CB3914800156AE8 /* APIClient.swift */,
+				B66252012CB3915D00156AE8 /* APIRequest.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +366,7 @@
 			files = (
 				B66251B12CB2265300156AE8 /* AppDelegate.swift in Sources */,
 				B66251F32CB2663F00156AE8 /* UICollectionView+Extension.swift in Sources */,
+				B66252022CB3915D00156AE8 /* APIRequest.swift in Sources */,
 				B66251ED2CB249D800156AE8 /* BaseCollectionViewCell.swift in Sources */,
 				B66251F72CB353AD00156AE8 /* FlightsHistoryViewController.swift in Sources */,
 				B66251FD2CB388CC00156AE8 /* Flight.swift in Sources */,
@@ -361,6 +376,7 @@
 				B66251E62CB2286000156AE8 /* HomeViewController.swift in Sources */,
 				B66251EF2CB24EBF00156AE8 /* HomeCollectionViewCell.swift in Sources */,
 				B66251FB2CB3602F00156AE8 /* UIColor+Extension.swift in Sources */,
+				B66252002CB3914800156AE8 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
