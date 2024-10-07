@@ -22,6 +22,7 @@
 		B66251F72CB353AD00156AE8 /* FlightsHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251F62CB353AD00156AE8 /* FlightsHistoryViewController.swift */; };
 		B66251F92CB353CD00156AE8 /* FlightsHistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251F82CB353CD00156AE8 /* FlightsHistoryViewCell.swift */; };
 		B66251FB2CB3602F00156AE8 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251FA2CB3602F00156AE8 /* UIColor+Extension.swift */; };
+		B66251FD2CB388CC00156AE8 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66251FC2CB388CB00156AE8 /* Flight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		B66251F62CB353AD00156AE8 /* FlightsHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsHistoryViewController.swift; sourceTree = "<group>"; };
 		B66251F82CB353CD00156AE8 /* FlightsHistoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsHistoryViewCell.swift; sourceTree = "<group>"; };
 		B66251FA2CB3602F00156AE8 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		B66251FC2CB388CB00156AE8 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		B66251E22CB2282300156AE8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B66251FC2CB388CB00156AE8 /* Flight.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				B66251F32CB2663F00156AE8 /* UICollectionView+Extension.swift in Sources */,
 				B66251ED2CB249D800156AE8 /* BaseCollectionViewCell.swift in Sources */,
 				B66251F72CB353AD00156AE8 /* FlightsHistoryViewController.swift in Sources */,
+				B66251FD2CB388CC00156AE8 /* Flight.swift in Sources */,
 				B66251F92CB353CD00156AE8 /* FlightsHistoryViewCell.swift in Sources */,
 				B66251EA2CB228A500156AE8 /* BaseViewController.swift in Sources */,
 				B66251B32CB2265300156AE8 /* SceneDelegate.swift in Sources */,
