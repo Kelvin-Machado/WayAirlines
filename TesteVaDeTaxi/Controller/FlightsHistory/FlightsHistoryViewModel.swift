@@ -32,7 +32,6 @@ final class FlightsHistoryViewModel {
 
 extension FlightsHistoryViewModel: FlightsHistoryViewModelProtocol {
     func loadFlights() {
-        print("Carregando histórico de voos...")
         service.fetchFlightsHistory { [weak self] result in
             self?.handle(result: result)
         }
