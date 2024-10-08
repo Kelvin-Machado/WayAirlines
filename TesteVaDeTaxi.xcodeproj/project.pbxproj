@@ -32,6 +32,9 @@
 		B662521D2CB5B30E00156AE8 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662521C2CB5B30D00156AE8 /* HomeCoordinator.swift */; };
 		B662521F2CB5B32B00156AE8 /* FlightsHistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662521E2CB5B32B00156AE8 /* FlightsHistoryCoordinator.swift */; };
 		B66252212CB5B39D00156AE8 /* CoordinatorsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66252202CB5B39D00156AE8 /* CoordinatorsProtocols.swift */; };
+		B66252352CB5EC0F00156AE8 /* FlightsHistoryServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66252342CB5EC0F00156AE8 /* FlightsHistoryServiceSpy.swift */; };
+		B66252372CB5EC2400156AE8 /* FlightsHistoryViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66252362CB5EC2400156AE8 /* FlightsHistoryViewControllerSpy.swift */; };
+		B66252392CB5EC6E00156AE8 /* FlightsHistoryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66252382CB5EC6E00156AE8 /* FlightsHistoryViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		B662521C2CB5B30D00156AE8 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		B662521E2CB5B32B00156AE8 /* FlightsHistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsHistoryCoordinator.swift; sourceTree = "<group>"; };
 		B66252202CB5B39D00156AE8 /* CoordinatorsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsProtocols.swift; sourceTree = "<group>"; };
+		B66252342CB5EC0F00156AE8 /* FlightsHistoryServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsHistoryServiceSpy.swift; sourceTree = "<group>"; };
+		B66252362CB5EC2400156AE8 /* FlightsHistoryViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsHistoryViewControllerSpy.swift; sourceTree = "<group>"; };
+		B66252382CB5EC6E00156AE8 /* FlightsHistoryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsHistoryViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				B66251C72CB2265A00156AE8 /* TesteVaDeTaxiTests.swift */,
+				B66252312CB5EB9200156AE8 /* FlightsHistoryTests */,
 			);
 			path = TesteVaDeTaxiTests;
 			sourceTree = "<group>";
@@ -277,6 +284,32 @@
 				B662521E2CB5B32B00156AE8 /* FlightsHistoryCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		B66252312CB5EB9200156AE8 /* FlightsHistoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				B66252322CB5EBC300156AE8 /* Spies */,
+				B66252332CB5EBCA00156AE8 /* ViewModel */,
+			);
+			path = FlightsHistoryTests;
+			sourceTree = "<group>";
+		};
+		B66252322CB5EBC300156AE8 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				B66252342CB5EC0F00156AE8 /* FlightsHistoryServiceSpy.swift */,
+				B66252362CB5EC2400156AE8 /* FlightsHistoryViewControllerSpy.swift */,
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
+		B66252332CB5EBCA00156AE8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B66252382CB5EC6E00156AE8 /* FlightsHistoryViewModelTests.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,6 +470,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66251C82CB2265A00156AE8 /* TesteVaDeTaxiTests.swift in Sources */,
+				B66252352CB5EC0F00156AE8 /* FlightsHistoryServiceSpy.swift in Sources */,
+				B66252372CB5EC2400156AE8 /* FlightsHistoryViewControllerSpy.swift in Sources */,
+				B66252392CB5EC6E00156AE8 /* FlightsHistoryViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

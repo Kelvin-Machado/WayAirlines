@@ -1,9 +1,9 @@
 
-struct Flights: Codable {
+struct Flights: Codable, Equatable {
     let flights: [Flight]
 }
 
-struct Flight: Codable {
+struct Flight: Codable, Equatable {
     let flightID: String
     let status: Status
     let completionStatus: CompletionStatus
