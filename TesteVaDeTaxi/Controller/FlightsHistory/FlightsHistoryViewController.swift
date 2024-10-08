@@ -49,6 +49,36 @@ final class FlightsHistoryViewController: BaseViewController {
     func loadData() {
         viewModel.loadFlights()
     }
+    
+    func navigateToFilteredList(for status: FlightStatus) {
+        let filteredFlights: [Flight]
+        let title: String
+        
+        switch status {
+        case .allFlights:
+            filteredFlights = self.flightsHistory
+            title = "Todos os Voos"
+        case .completedFlight:
+            filteredFlights = self.flightsHistory.filter { $0.status == .concluido }
+            title = "Voos concluídos"
+        case .cancelledFlight:
+            filteredFlights = self.flightsHistory.filter { $0.status == .cancelado }
+            title = "Voos cancelados"
+        case .delayedFlight:
+            filteredFlights = self.flightsHistory.filter { $0.completionStatus == .atrasou }
+            title = "Voos atrasados"
+        case .onTimeFlight:
+            filteredFlights = self.flightsHistory.filter { $0.completionStatus == .noHorario }
+            title = "Voos no horário"
+        case .ongoingFlight:
+            filteredFlights = self.flightsHistory.filter { $0.status == .emAndamento }
+            title = "Voos em andamento"
+        }
+        
+        let filteredListVC = FlightsFilteredListViewController(flightsHistory: filteredFlights)
+        filteredListVC.title = title
+        self.navigationController?.pushViewController(filteredListVC, animated: true)
+    }
 }
 
 extension FlightsHistoryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -78,22 +108,7 @@ extension FlightsHistoryViewController: UICollectionViewDelegate, UICollectionVi
         
         let selectedFlightStatus = FlightStatus.allCases[indexPath.row]
         
-        switch selectedFlightStatus {
-        case .allFlights:
-            let filteredListVC = FlightsFilteredListViewController(flightsHistory: self.flightsHistory)
-            self.navigationController?.pushViewController(filteredListVC, animated: true)
-        case .completedFlight:
-            print(FlightStatus.completedFlight.text)
-            
-        case .cancelledFlight:
-            print(FlightStatus.cancelledFlight.text)
-        case .delayedFlight:
-            print(FlightStatus.delayedFlight.text)
-        case .onTimeFlight:
-            print(FlightStatus.onTimeFlight.text)
-        case .ongoingFlight:
-            print(FlightStatus.ongoingFlight.text)
-        }
+        navigateToFilteredList(for: selectedFlightStatus)
     }
     
 }
@@ -110,47 +125,4 @@ extension FlightsHistoryViewController: ListFlightsViewControllerDisplay {
         self.present(alert, animated: true)
     }
     
-}
-
-enum FlightStatus: CaseIterable {
-    case allFlights
-    case completedFlight
-    case cancelledFlight
-    case delayedFlight
-    case onTimeFlight
-    case ongoingFlight
-    
-    var imageName: String {
-        switch self {
-        case .allFlights:
-            return "all_flights"
-        case .completedFlight:
-            return "completed_flight"
-        case .cancelledFlight:
-            return "cancelled_flight"
-        case .delayedFlight:
-            return "delayed_flight"
-        case .onTimeFlight:
-            return "on_time_flight"
-        case .ongoingFlight:
-            return "ongoing_flights"
-        }
-    }
-    
-    var text: String {
-        switch self {
-        case .allFlights:
-            return "Todos os Voos"
-        case .completedFlight:
-            return "Voos Concluídos"
-        case .cancelledFlight:
-            return "Voos Cancelados"
-        case .delayedFlight:
-            return "Voos Atrasados"
-        case .onTimeFlight:
-            return "Voos no Horário"
-        case .ongoingFlight:
-            return "Voos em Andamento"
-        }
-    }
 }

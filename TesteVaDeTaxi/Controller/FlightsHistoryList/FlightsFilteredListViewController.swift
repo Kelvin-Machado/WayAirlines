@@ -2,10 +2,8 @@ import UIKit
 
 final class FlightsFilteredListViewController: BaseViewController {
     
-    //MARK: - properties
     private var collectionView: UICollectionView!
-    
-    private var flightsHistory = [Flight]()
+    private var flightsHistory: [Flight]
     
     init(flightsHistory: [Flight]) {
         self.flightsHistory = flightsHistory
@@ -23,7 +21,7 @@ final class FlightsFilteredListViewController: BaseViewController {
     
     private func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: view.frame.width - 40, height: 80)
+        layout.itemSize = CGSize(width: view.frame.width - 40, height: 280)
         layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
@@ -31,6 +29,8 @@ final class FlightsFilteredListViewController: BaseViewController {
         collectionView.dataSource = self
         collectionView.backgroundColor = .clear
         collectionView.register(cellType: FlightsFilteredListViewCell.self)
+        
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
         
         view.addSubview(collectionView)
     }
@@ -44,24 +44,9 @@ extension FlightsFilteredListViewController: UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: FlightsFilteredListViewCell = collectionView.dequeueReusableCell(for: indexPath)
         
-        let flightStatus = flightsHistory[indexPath.row].status
-
-        let cellImageName: String
-
-        switch flightStatus {
-        case .concluido:
-            cellImageName = FlightStatus.completedFlight.imageName
-        case .cancelado:
-            cellImageName = FlightStatus.cancelledFlight.imageName
-        case .emAndamento:
-            cellImageName = FlightStatus.ongoingFlight.imageName
-        }
-
-        let image = UIImage(named: cellImageName)
-        let text = "\(flightsHistory[indexPath.row].airplaneName) || \(flightsHistory[indexPath.row].flightID)"
-        cell.configure(image: image, text: text)
+        let flightData = flightsHistory[indexPath.row]
+        cell.configure(flightData: flightData)
+        
         return cell
     }
-    
 }
-
