@@ -10,5 +10,5 @@ protocol HomeCoordinatorProtocol: AnyObject {
 }
 
 protocol FlightsHistoryCoordinatorProtocol: AnyObject {
-    func navigateToFilteredList(flights: [Flight], title: String)
+    func navigateToFilteredList(for status: FlightStatus, with flightsHistory: [Flight])
 }

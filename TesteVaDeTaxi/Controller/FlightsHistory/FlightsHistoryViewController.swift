@@ -8,12 +8,13 @@ protocol ListFlightsViewControllerDisplay: AnyObject {
 final class FlightsHistoryViewController: BaseViewController {
     
     private var collectionView: UICollectionView!
-    
     var flightsHistory = [Flight]()
     private var viewModel: FlightsHistoryViewModelProtocol
+    private weak var coordinator: FlightsHistoryCoordinatorProtocol?
     
-    init(viewModel: FlightsHistoryViewModelProtocol) {
+    init(viewModel: FlightsHistoryViewModelProtocol, coordinator: FlightsHistoryCoordinatorProtocol) {
         self.viewModel = viewModel
+        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -47,33 +48,7 @@ final class FlightsHistoryViewController: BaseViewController {
     }
     
     func navigateToFilteredList(for status: FlightStatus) {
-        let filteredFlights: [Flight]
-        let title: String
-        
-        switch status {
-        case .allFlights:
-            filteredFlights = self.flightsHistory
-            title = "Todos os Voos"
-        case .completedFlight:
-            filteredFlights = self.flightsHistory.filter { $0.status == .concluido }
-            title = "Voos concluídos"
-        case .cancelledFlight:
-            filteredFlights = self.flightsHistory.filter { $0.status == .cancelado }
-            title = "Voos cancelados"
-        case .delayedFlight:
-            filteredFlights = self.flightsHistory.filter { $0.completionStatus == .atrasou }
-            title = "Voos atrasados"
-        case .onTimeFlight:
-            filteredFlights = self.flightsHistory.filter { $0.completionStatus == .noHorario }
-            title = "Voos no horário"
-        case .ongoingFlight:
-            filteredFlights = self.flightsHistory.filter { $0.status == .emAndamento }
-            title = "Voos em andamento"
-        }
-        
-        let filteredListVC = FlightsFilteredListViewController(flightsHistory: filteredFlights)
-        filteredListVC.title = title
-        self.navigationController?.pushViewController(filteredListVC, animated: true)
+        coordinator?.navigateToFilteredList(for: status, with: flightsHistory)
     }
 }
 

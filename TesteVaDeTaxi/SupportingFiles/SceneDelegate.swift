@@ -8,7 +8,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         window = UIWindow(windowScene: windowScene)
-        let homeVC = HomeViewController()
         let navController = UINavigationController()
         coordinator = HomeCoordinator(navigationController: navController)
         coordinator?.startCoordinator()

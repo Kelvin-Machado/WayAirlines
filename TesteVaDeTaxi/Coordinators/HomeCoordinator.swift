@@ -2,6 +2,7 @@ import UIKit
 
 final class HomeCoordinator: Coordinator {
     var navigationController: UINavigationController
+    var flightsHistoryCoordinator: FlightsHistoryCoordinator?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -14,9 +15,10 @@ final class HomeCoordinator: Coordinator {
     }
     
     func navigateToFlightsHistory() {
+        flightsHistoryCoordinator = FlightsHistoryCoordinator(navigationController: navigationController)
         let service = FlightsHistoryService(client: APIClient())
         let viewModel = FlightsHistoryViewModel(service: service)
-        let flightsHistoryVC = FlightsHistoryViewController(viewModel: viewModel)
+        let flightsHistoryVC = FlightsHistoryViewController(viewModel: viewModel, coordinator: flightsHistoryCoordinator!)
         flightsHistoryVC.title = "Histórico de Voos"
         navigationController.pushViewController(flightsHistoryVC, animated: true)
     }
