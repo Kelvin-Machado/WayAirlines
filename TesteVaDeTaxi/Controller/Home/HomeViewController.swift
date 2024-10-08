@@ -2,6 +2,7 @@ import UIKit
 
 final class HomeViewController: BaseViewController {
     
+    var coordinator: HomeCoordinator?
     private var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -55,11 +56,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //TODO: add coordinator pattern
-        let service = FlightsHistoryService(client: APIClient())
-        let viewModel = FlightsHistoryViewModel(service: service)
-        let flightsHistoryVC = FlightsHistoryViewController(viewModel: viewModel)
-        flightsHistoryVC.title = "Histórico de Voos"
-        navigationController?.pushViewController(flightsHistoryVC, animated: true)
+        coordinator?.navigateToFlightsHistory()
     }
 }

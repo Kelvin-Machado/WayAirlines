@@ -29,6 +29,9 @@
 		B66252072CB3A7CD00156AE8 /* FlightsFilteredListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66252062CB3A7CD00156AE8 /* FlightsFilteredListViewController.swift */; };
 		B662520C2CB3A88D00156AE8 /* FlightsFilteredListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662520B2CB3A88D00156AE8 /* FlightsFilteredListViewCell.swift */; };
 		B662520E2CB481B400156AE8 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662520D2CB481B400156AE8 /* Data+Extension.swift */; };
+		B662521D2CB5B30E00156AE8 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662521C2CB5B30D00156AE8 /* HomeCoordinator.swift */; };
+		B662521F2CB5B32B00156AE8 /* FlightsHistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662521E2CB5B32B00156AE8 /* FlightsHistoryCoordinator.swift */; };
+		B66252212CB5B39D00156AE8 /* CoordinatorsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66252202CB5B39D00156AE8 /* CoordinatorsProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		B66252062CB3A7CD00156AE8 /* FlightsFilteredListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsFilteredListViewController.swift; sourceTree = "<group>"; };
 		B662520B2CB3A88D00156AE8 /* FlightsFilteredListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsFilteredListViewCell.swift; sourceTree = "<group>"; };
 		B662520D2CB481B400156AE8 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		B662521C2CB5B30D00156AE8 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		B662521E2CB5B32B00156AE8 /* FlightsHistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsHistoryCoordinator.swift; sourceTree = "<group>"; };
+		B66252202CB5B39D00156AE8 /* CoordinatorsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +136,7 @@
 				B66251E02CB227B800156AE8 /* SupportingFiles */,
 				B66251FE2CB390F700156AE8 /* Networking */,
 				B66251F12CB265DA00156AE8 /* Extension */,
+				B662521B2CB5B2EA00156AE8 /* Coordinators */,
 			);
 			path = TesteVaDeTaxi;
 			sourceTree = "<group>";
@@ -260,6 +267,16 @@
 				B662520B2CB3A88D00156AE8 /* FlightsFilteredListViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		B662521B2CB5B2EA00156AE8 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				B66252202CB5B39D00156AE8 /* CoordinatorsProtocols.swift */,
+				B662521C2CB5B30D00156AE8 /* HomeCoordinator.swift */,
+				B662521E2CB5B32B00156AE8 /* FlightsHistoryCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,12 +414,15 @@
 				B66251F32CB2663F00156AE8 /* UICollectionView+Extension.swift in Sources */,
 				B66252072CB3A7CD00156AE8 /* FlightsFilteredListViewController.swift in Sources */,
 				B66252022CB3915D00156AE8 /* APIRequest.swift in Sources */,
+				B662521F2CB5B32B00156AE8 /* FlightsHistoryCoordinator.swift in Sources */,
 				B66251ED2CB249D800156AE8 /* BaseCollectionViewCell.swift in Sources */,
 				B66251F72CB353AD00156AE8 /* FlightsHistoryViewController.swift in Sources */,
 				B66251FD2CB388CC00156AE8 /* Flight.swift in Sources */,
 				B66251F92CB353CD00156AE8 /* FlightsHistoryViewCell.swift in Sources */,
+				B66252212CB5B39D00156AE8 /* CoordinatorsProtocols.swift in Sources */,
 				B66251EA2CB228A500156AE8 /* BaseViewController.swift in Sources */,
 				B66251B32CB2265300156AE8 /* SceneDelegate.swift in Sources */,
+				B662521D2CB5B30E00156AE8 /* HomeCoordinator.swift in Sources */,
 				B66251E62CB2286000156AE8 /* HomeViewController.swift in Sources */,
 				B66251EF2CB24EBF00156AE8 /* HomeCollectionViewCell.swift in Sources */,
 				B66251FB2CB3602F00156AE8 /* UIColor+Extension.swift in Sources */,

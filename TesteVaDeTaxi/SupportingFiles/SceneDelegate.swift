@@ -2,13 +2,17 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
-
+    var coordinator: HomeCoordinator?
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         window = UIWindow(windowScene: windowScene)
         let homeVC = HomeViewController()
-        let navController = UINavigationController(rootViewController: homeVC)
+        let navController = UINavigationController()
+        coordinator = HomeCoordinator(navigationController: navController)
+        coordinator?.startCoordinator()
+        
         window?.rootViewController = navController
         window?.rootViewController = navController
         window?.makeKeyAndVisible()

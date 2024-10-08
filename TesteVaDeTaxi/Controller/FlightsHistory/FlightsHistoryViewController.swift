@@ -7,15 +7,11 @@ protocol ListFlightsViewControllerDisplay: AnyObject {
 
 final class FlightsHistoryViewController: BaseViewController {
     
-    
-    //MARK: - properties
     private var collectionView: UICollectionView!
     
     var flightsHistory = [Flight]()
     private var viewModel: FlightsHistoryViewModelProtocol
     
-    
-    //MARK: - setup
     init(viewModel: FlightsHistoryViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
