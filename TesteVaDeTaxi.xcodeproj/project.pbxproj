@@ -35,6 +35,7 @@
 		B66252352CB5EC0F00156AE8 /* FlightsHistoryServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66252342CB5EC0F00156AE8 /* FlightsHistoryServiceSpy.swift */; };
 		B66252372CB5EC2400156AE8 /* FlightsHistoryViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66252362CB5EC2400156AE8 /* FlightsHistoryViewControllerSpy.swift */; };
 		B66252392CB5EC6E00156AE8 /* FlightsHistoryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66252382CB5EC6E00156AE8 /* FlightsHistoryViewModelTests.swift */; };
+		B6EC4D5F2CC2BA4C00CC9F73 /* FlightsFilteredListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EC4D5E2CC2BA4C00CC9F73 /* FlightsFilteredListFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		B66252342CB5EC0F00156AE8 /* FlightsHistoryServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsHistoryServiceSpy.swift; sourceTree = "<group>"; };
 		B66252362CB5EC2400156AE8 /* FlightsHistoryViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsHistoryViewControllerSpy.swift; sourceTree = "<group>"; };
 		B66252382CB5EC6E00156AE8 /* FlightsHistoryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsHistoryViewModelTests.swift; sourceTree = "<group>"; };
+		B6EC4D5E2CC2BA4C00CC9F73 /* FlightsFilteredListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsFilteredListFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				B662520A2CB3A86600156AE8 /* Cell */,
+				B6EC4D592CC2B6DE00CC9F73 /* Factory */,
 				B66252062CB3A7CD00156AE8 /* FlightsFilteredListViewController.swift */,
 			);
 			path = FlightsHistoryList;
@@ -310,6 +313,14 @@
 				B66252382CB5EC6E00156AE8 /* FlightsHistoryViewModelTests.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B6EC4D592CC2B6DE00CC9F73 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				B6EC4D5E2CC2BA4C00CC9F73 /* FlightsFilteredListFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,6 +458,7 @@
 				B66251F32CB2663F00156AE8 /* UICollectionView+Extension.swift in Sources */,
 				B66252072CB3A7CD00156AE8 /* FlightsFilteredListViewController.swift in Sources */,
 				B66252022CB3915D00156AE8 /* APIRequest.swift in Sources */,
+				B6EC4D5F2CC2BA4C00CC9F73 /* FlightsFilteredListFactory.swift in Sources */,
 				B662521F2CB5B32B00156AE8 /* FlightsHistoryCoordinator.swift in Sources */,
 				B66251ED2CB249D800156AE8 /* BaseCollectionViewCell.swift in Sources */,
 				B66251F72CB353AD00156AE8 /* FlightsHistoryViewController.swift in Sources */,
