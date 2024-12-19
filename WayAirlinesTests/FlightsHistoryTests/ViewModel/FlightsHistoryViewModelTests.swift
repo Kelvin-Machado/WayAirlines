@@ -1,5 +1,5 @@
 import XCTest
-@testable import TesteVaDeTaxi
+@testable import WayAirlines
 
 final class FlightsHistoryViewModelTests: XCTestCase {
     private lazy var serviceSpy = FlightsHistoryServiceSpy()

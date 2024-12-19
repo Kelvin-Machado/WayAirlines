@@ -1,4 +1,4 @@
-@testable import TesteVaDeTaxi
+@testable import WayAirlines
 
 final class FlightsHistoryViewControllerSpy: ListFlightsViewControllerDisplay {
     enum CalledMethods: Equatable {
@@ -8,7 +8,7 @@ final class FlightsHistoryViewControllerSpy: ListFlightsViewControllerDisplay {
 
     private(set) var calledMethods = [CalledMethods]()
     
-    func showFlights(_ flights: TesteVaDeTaxi.Flights) {
+    func showFlights(_ flights: WayAirlines.Flights) {
         calledMethods.append(.showFlights(flights))
     }
     
