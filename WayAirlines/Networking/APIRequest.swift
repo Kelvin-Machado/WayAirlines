@@ -20,29 +20,38 @@ final class FlightsHistoryService: FlightsHistoryServiceProtocol {
     }
     
     func fetchFlightsHistory(completion: @escaping (Result<Flights, ServiceError>) -> Void) {
-        
-        //TODO: colocar o useMockData como false para testar os dados direto da API
         let useMockData = true
+        
         if useMockData {
-            print("Carregando histórico de voos mockados...")
-            let jsonString = getMockFlightsData()
-            
-            guard let jsonData = jsonString.data(using: .utf8) else {
-                return completion(.failure(.generic(NSError(domain: "MockDataError", code: 0, userInfo: nil))))
-            }
-            
-            do {
-                let decoder = JSONDecoder()
-                let decoded = try decoder.decode(Flights.self, from: jsonData)
-                completion(.success(decoded))
-            } catch let error {
-                completion(.failure(.generic(error)))
-            }
+            fetchMockFlightsData(completion: completion)
             return
         }
         
+        fetchFlightsFromAPI(completion: completion)
+    }
+
+    private func fetchMockFlightsData(completion: @escaping (Result<Flights, ServiceError>) -> Void) {
+        print("Carregando histórico de voos mockados...")
+        let jsonString = getMockFlightsData()
+        
+        guard let jsonData = jsonString.data(using: .utf8) else {
+            completion(.failure(.generic(NSError(domain: "MockDataError", code: 0, userInfo: nil))))
+            return
+        }
+        
+        do {
+            let decoder = JSONDecoder()
+            let decoded = try decoder.decode(Flights.self, from: jsonData)
+            completion(.success(decoded))
+        } catch let error {
+            completion(.failure(.generic(error)))
+        }
+    }
+
+    private func fetchFlightsFromAPI(completion: @escaping (Result<Flights, ServiceError>) -> Void) {
         guard let api = URL(string: apiURL) else {
-            return completion(.failure(.invalidUrl))
+            completion(.failure(.invalidUrl))
+            return
         }
         
         client.requestGet(url: api) { result in
@@ -51,7 +60,6 @@ final class FlightsHistoryService: FlightsHistoryServiceProtocol {
                 do {
                     let decoder = JSONDecoder()
                     let decoded = try decoder.decode(Flights.self, from: data)
-                    
                     completion(.success(decoded))
                 } catch let error {
                     completion(.failure(.generic(error)))
@@ -61,6 +69,7 @@ final class FlightsHistoryService: FlightsHistoryServiceProtocol {
             }
         }
     }
+
 }
 func getMockFlightsData() -> String {
     return """
